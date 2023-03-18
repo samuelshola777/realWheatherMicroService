@@ -14,7 +14,9 @@ public String test(){
 }
 @GetMapping("/getWeather")
 public WeatherResponse getWeather(){
-    ResponseEntity<WeatherResponse> response = new RestTemplate().getForEntity("https://api.openweathermap.org/data/2.5/weather?lat=6.52319&lon=3.38044&appid=20f0506e31e420c5bc9889700b4310aa", WeatherResponse.class);
+    ResponseEntity<WeatherResponse> response = new RestTemplate().getForEntity("https://api.openweathermap.org/data/2" +
+            ".5/weather?lat=6.52319&lon=3.38044&appid=20f050" +
+            "6e31e420c5bc9889700b4310aa", WeatherResponse.class);
 return response.getBody();
 }
 
